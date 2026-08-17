@@ -35,6 +35,15 @@
 - [LeRobotDataset 数据格式](../lerobot_dataset_research/README.md)
 - [LeRobot 仓库能力与模型总览](../lerobot_repo_research/README.md)
 - [Benchmark、模拟器与训练集关系](../lerobot_repo_research/benchmark.md)
+- [初始复现实验：LIBERO 与 LIBERO-plus](../lerobot_reproduction/README.md)
+
+## 配套 Python 示例
+
+本目录下的 [examples](./examples/README.md) 是为初学者整理的阅读版示例：
+
+- `dataset/`：先理解 metadata、episode、frame、时间窗口和 batch 的形状；
+- `training/`：只围绕 Pi0/Pi05 这类 VLA，理解全量微调、LoRA 和 `lerobot-train` 的参数；
+- 示例默认只展示命令或读取少量数据，不会自动启动大规模训练，也不涉及真实机器人。
 
 ## 先记住三个层次
 
@@ -59,4 +68,3 @@ Processor      → 对齐 observation、action 和 policy 输入
 - 记录代码 commit、数据 revision、模型 checkpoint、随机种子和评测 episodes；
 - 不把训练集上的 loss 下降直接当作 benchmark 成功率提升；
 - 不把不同 embodiment 或不同 action space 的结果直接横向比较。
-
